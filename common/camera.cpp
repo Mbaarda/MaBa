@@ -10,9 +10,9 @@ Camera::~Camera() {
 
 }
 
-glm::vec3 Camera::getCursor(){
+/*glm::vec3 Camera::getCursor(){
 	return cursor;
-}
+}*/
 
 float speed = 300.0f; // 300 units / second
 

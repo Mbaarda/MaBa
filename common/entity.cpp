@@ -1,15 +1,26 @@
-#include <iostream>
-#include <vector>
-#include <MyFramework/entity.h>
+#include <common/entity.h>
 
 Entity::Entity() {
 
-	Entity* _parent = nullptr;
-	std::vector<Entity*> _children;
+	_parent = nullptr;
+	_sprite = nullptr;
 
-	position =
-	rotation =
-	scale = 
+	pos = glm::vec3(0, 0, 0);
+	rotation = glm::vec3(0, 0, 0);
+	scale = glm::vec3 (0, 0, 0);
+
+}
+
+
+Entity::~Entity() {
+	
+}
+
+
+void Entity::addSprite(const std::string& file_path) {
+
+	_sprite = nullptr;
+	_sprite = new Sprite(file_path);
 }
 
 void Entity::addChild(Entity* child) {
@@ -18,9 +29,8 @@ void Entity::addChild(Entity* child) {
 		child->_parent->removeChild(child);
 	}
 	child->_parent = this;
-	this->children.push_back(child);
+	this->_children.push_back(child);
 }
 
-Entity::~Entity() {
-	
-}
+
+

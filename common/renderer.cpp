@@ -77,7 +77,8 @@ int Renderer::init()
 
 void Renderer::renderSprite(Sprite* sprite, float px, float py, float sx, float sy, float rot)
 {
-	std::cout << "stokbrood" << std::endl;
+	//std::cout << "stokbrood" << std::endl;
+	camera.computeMatricesFromInputs(_window);
 	glm::mat4 viewMatrix  = camera.getViewMatrix(); // get from Camera (Camera position and direction)
 	glm::mat4 modelMatrix = glm::mat4(1.0f);
 

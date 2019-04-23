@@ -19,7 +19,9 @@ class Camera
 		glm::mat4 Camera::getViewMatrix() {
 			return _viewMatrix;
 		}
-		glm::vec3 getCursor();
+		glm::vec3 getCursor() {
+			return cursor;
+		};
 
 	private:
 		// Initial position : on +Z

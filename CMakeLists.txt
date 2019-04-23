@@ -67,6 +67,10 @@ add_library(common
 	common/sprite.cpp
 	common/entity.cpp
 	common/entity.h
+	common/scene.cpp 
+	common/scene.h
+	common/core.cpp 
+	common/core.h
 )
 
 # Demo
